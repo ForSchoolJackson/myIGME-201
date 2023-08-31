@@ -1,7 +1,0 @@
-C:\Users\pizza\OneDrive\Documents\School\Coding\SECOND YEAR\myIGME-201\Heim_PE1\bin\Debug\Heim_PE1.exe.config
-C:\Users\pizza\OneDrive\Documents\School\Coding\SECOND YEAR\myIGME-201\Heim_PE1\bin\Debug\Heim_PE1.exe
-C:\Users\pizza\OneDrive\Documents\School\Coding\SECOND YEAR\myIGME-201\Heim_PE1\bin\Debug\Heim_PE1.pdb
-C:\Users\pizza\OneDrive\Documents\School\Coding\SECOND YEAR\myIGME-201\Heim_PE1\obj\Debug\Heim_PE1.csproj.AssemblyReference.cache
-C:\Users\pizza\OneDrive\Documents\School\Coding\SECOND YEAR\myIGME-201\Heim_PE1\obj\Debug\Heim_PE1.csproj.CoreCompileInputs.cache
-C:\Users\pizza\OneDrive\Documents\School\Coding\SECOND YEAR\myIGME-201\Heim_PE1\obj\Debug\Heim_PE1.exe
-C:\Users\pizza\OneDrive\Documents\School\Coding\SECOND YEAR\myIGME-201\Heim_PE1\obj\Debug\Heim_PE1.pdb
