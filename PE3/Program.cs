@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 //get four numbers from user and display the product of those numbers
 
@@ -12,6 +14,16 @@ namespace ProductOfNumbers
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("Please enter a number with a decimal precision of 2.");
+            string input = Console.ReadLine();
+            double output = Double.Parse(input);
+            Console.WriteLine(output + 55.0);
+
+
+
+
+
             //initialize numbers
             int nNum1 = 0;
             int nNum2 = 0;
@@ -67,7 +79,7 @@ namespace ProductOfNumbers
             }
 
             //show the product of the numbers
-            Console.WriteLine("Product is:"+ (nNum1*nNum2*nNum3*nNum4));
+            Console.WriteLine("Product is:" + (nNum1 * nNum2 * nNum3 * nNum4));
 
         }
 
