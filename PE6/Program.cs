@@ -70,7 +70,7 @@ namespace PE6
                             {
                                 //find how many turns
                                 turns = (i + 1);
-                                //leave loop
+                                //escape the whole loop
                                 goto endOfGame;
                             }
 
@@ -98,6 +98,7 @@ namespace PE6
 
 
             }
+            //begin at the end of the game
         endOfGame:
             //indent line
             Console.WriteLine("");
