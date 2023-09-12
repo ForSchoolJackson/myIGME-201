@@ -52,6 +52,7 @@ namespace PE6
                         {
 
                             //test if guessed number is higher, lower or correct
+                            //number is too high
                             if (nInput > randomNumber)
                             {
                                 Console.WriteLine("Too high");
@@ -59,6 +60,7 @@ namespace PE6
                                 //move on
                                 break;
                             }
+                            //number is too low
                             else if (nInput < randomNumber)
                             {
                                 Console.WriteLine("Too low");
@@ -66,6 +68,7 @@ namespace PE6
                                 //move on
                                 break;
                             }
+                            //number is correct
                             else if (nInput == randomNumber)
                             {
                                 //find how many turns
