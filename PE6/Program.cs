@@ -2,6 +2,8 @@
 
 namespace PE6
 {
+    //class program
+    //Jackson Heim
     internal class Program
     {
         //main method
@@ -22,7 +24,7 @@ namespace PE6
             Random rand = new Random();
 
             //generate the random number in the range of 0-100
-            int randomNumber = rand.Next(0, 100);
+            int randomNumber = rand.Next(0, 101);
 
             //print random number at the top of the console
             Console.WriteLine(randomNumber);
