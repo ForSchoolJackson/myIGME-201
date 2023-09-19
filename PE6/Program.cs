@@ -29,11 +29,6 @@ namespace PE6
             //print random number at the top of the console
             Console.WriteLine(randomNumber);
 
-            //tell user to guess
-            Console.WriteLine("The number is between 0 and 100, you have eight guesses to get it correct.");
-
-
-
             //loop to give user 8 tries to guess the number
             for (int i = 0; i < 8; ++i)
 
