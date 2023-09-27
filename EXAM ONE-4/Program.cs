@@ -132,8 +132,8 @@ namespace EXAM_ONE_4
             }
             else
             {
-                Console.WriteLine("Time's up!");
                 Console.WriteLine("The answer is: " + cAnswer);
+                
             }
 
             //ask user to play again
@@ -174,15 +174,13 @@ namespace EXAM_ONE_4
         //timer function for when the time is up
         static void TimesUp(object sender, ElapsedEventArgs e)
         {
+            //tell user time is up
             Console.WriteLine("Times up!");
-
-            //dont know how to get this to work so just make them enter a 0
             Console.WriteLine("Please press enter.");
 
-            //make timer start over
-            bTimeOut = false;
+            timeOutTimer.Stop();
 
-           
+
 
         }
     }
