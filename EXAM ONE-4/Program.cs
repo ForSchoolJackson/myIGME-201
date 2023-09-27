@@ -5,8 +5,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace EXAM_ONE_4
 {
@@ -15,6 +15,12 @@ namespace EXAM_ONE_4
     //jackson heim
     internal class Program
     {
+
+        //set up the timer
+        static Timer timeOutTimer;
+        //timer is not up yet
+        static bool bTimeOut = false;
+
 
         //copy the 3 questions application
         static void Main(string[] args)
@@ -58,6 +64,15 @@ namespace EXAM_ONE_4
 
             } while (true);
 
+            //create a timer for 5 seconds
+            timeOutTimer = new Timer(5000);
+
+            //calls on timer elapsed event handler
+            timeOutTimer.Elapsed += new ElapsedEventHandler(TimesUp);
+
+            //start timer
+            timeOutTimer.Start();
+
             //explain time limit
             Console.WriteLine("You have 5 seconds to answer the following question: ");
 
@@ -72,15 +87,9 @@ namespace EXAM_ONE_4
 
                     //check if answer is correct
                     uAnswer = Console.ReadLine();
-                    if (uAnswer == cAnswer)
-                    {
-                        Console.WriteLine("Well Done!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Wrong!  The answer is: " + cAnswer);
-                    }
+
                     break;
+                    
 
                 case 2:
                     //correct answer
@@ -90,14 +99,7 @@ namespace EXAM_ONE_4
 
                     //check if answer is correct
                     uAnswer = Console.ReadLine();
-                    if (uAnswer == cAnswer)
-                    {
-                        Console.WriteLine("Well Done!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Wrong!  The answer is: " + cAnswer);
-                    }
+                   
                     break;
 
                 case 3:
@@ -108,15 +110,30 @@ namespace EXAM_ONE_4
 
                     //check if answer is correct
                     uAnswer = Console.ReadLine();
-                    if(uAnswer == cAnswer)
-                    {
-                        Console.WriteLine("Well Done!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Wrong!  The answer is: " + cAnswer);
-                    }
+                    
                     break;
+            }
+
+            //end timer
+            timeOutTimer.Stop();
+
+            //check if time is up
+            if(bTimeOut == false)
+            {
+                //check is answer is correct
+                if (uAnswer == cAnswer)
+                {
+                    Console.WriteLine("Well Done!");
+                }
+                else
+                {
+                    Console.WriteLine("Wrong!  The answer is: " + cAnswer);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Time's up!");
+                Console.WriteLine("The answer is: " + cAnswer);
             }
 
             //ask user to play again
@@ -152,7 +169,22 @@ namespace EXAM_ONE_4
             Console.WriteLine("GoodBye");
 
         }
-        
+
+
+        //timer function for when the time is up
+        static void TimesUp(object sender, ElapsedEventArgs e)
+        {
+            Console.WriteLine("Times up!");
+
+            //dont know how to get this to work so just make them enter a 0
+            Console.WriteLine("Please press enter.");
+
+            //make timer start over
+            bTimeOut = false;
+
+           
+
+        }
     }
 }
 
