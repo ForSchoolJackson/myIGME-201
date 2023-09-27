@@ -122,7 +122,7 @@ class Program
                 break;
         }
         //tell user to round to 2 decimals
-        Console.WriteLine("If needed, round to two decimal places");
+        Console.WriteLine("For division, round to two decimal places");
 
 
         // ask each question
@@ -192,8 +192,7 @@ class Program
             // else output stark answer
             if (nResponse == nAnswer)
             {
-                Console.BackgroundColor = ConsoleColor.Blue;
-                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Well done, {0}!!!", myName);
 
                 ++nCorrect;
