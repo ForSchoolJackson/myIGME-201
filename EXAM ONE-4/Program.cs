@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
+//using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 
@@ -32,6 +33,7 @@ namespace EXAM_ONE_4
             string uAnswer = null;
             //correct answer
             string cAnswer = null;
+            
 
         //start of game
         start:
@@ -130,11 +132,6 @@ namespace EXAM_ONE_4
                     Console.WriteLine("Wrong!  The answer is: " + cAnswer);
                 }
             }
-            else
-            {
-                Console.WriteLine("The answer is: " + cAnswer);
-                
-            }
 
             //ask user to play again
             do
@@ -175,9 +172,14 @@ namespace EXAM_ONE_4
         static void TimesUp(object sender, ElapsedEventArgs e)
         {
             //tell user time is up
-            Console.WriteLine("Times up!");
+            Console.WriteLine("Time's up!");
+           // Console.WriteLine("The answer is: " + cAnswer); cant get it to work
             Console.WriteLine("Please press enter.");
 
+            //set timer is out
+            bTimeOut = true;
+
+            //stop timer
             timeOutTimer.Stop();
 
 
