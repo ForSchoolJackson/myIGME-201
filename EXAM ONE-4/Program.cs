@@ -33,7 +33,10 @@ namespace EXAM_ONE_4
             string uAnswer = null;
             //correct answer
             string cAnswer = null;
-            
+
+
+
+
 
         //start of game
         start:
@@ -160,8 +163,8 @@ namespace EXAM_ONE_4
             } while (true);
 
 
-            //i dont know how to force the program to quit right after so i added this
-            //end of program
+        //i dont know how to force the program to quit right after so i added this
+        //end of program
         endProgram:
             Console.WriteLine("GoodBye");
 
@@ -171,9 +174,10 @@ namespace EXAM_ONE_4
         //timer function for when the time is up
         static void TimesUp(object sender, ElapsedEventArgs e)
         {
+
             //tell user time is up
             Console.WriteLine("Time's up!");
-           // Console.WriteLine("The answer is: " + cAnswer); cant get it to work
+          // Console.WriteLine("The answer is: " + cAnswer);
             Console.WriteLine("Please press enter.");
 
             //set timer is out
