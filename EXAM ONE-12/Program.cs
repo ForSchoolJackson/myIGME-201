@@ -11,7 +11,7 @@ namespace EXAM_ONE_12
     //jackson heim
     internal class Program
     {
-        //promt user name and 
+        //promt user name and give raise if correct person
         static void Main(string[] args)
         {
             //declerations
