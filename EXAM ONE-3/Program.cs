@@ -40,6 +40,7 @@ namespace EXAM_ONE_3
             Console.WriteLine(myRoundNumber(4.55949494));
         }
 
+        //delegate for turning doubles into ints
         static double Round(double num)
         {
             //round to be able to convert
