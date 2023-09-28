@@ -65,12 +65,7 @@ namespace EXAM_ONE_8
                     //store z into the array
                     calculation[nX, nY, 2] = z;
 
-
-                   
-
                 }
-
-
             }
 
             //test
