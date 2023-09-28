@@ -72,6 +72,7 @@ namespace EXAM_ONE_8
             Console.WriteLine(calculation[0, 0, 2]);
         }
 
+        //delegate for rounding numbers
         static double Round(double num, int roundTo)
         {
             //round the numbers
