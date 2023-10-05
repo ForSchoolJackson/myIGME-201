@@ -25,13 +25,14 @@ namespace Vehicles
     //parent vehicle class
     public abstract class Vehicle
     {
+        public virtual void LoadPassenger() { }
+
     }
 
     //parent train class, child of vehicle
     public abstract class Train : Vehicle
     {
-        public virtual void LoadPassenger() { }
-
+        
     }
 
     //parent car class, child of vehicle
