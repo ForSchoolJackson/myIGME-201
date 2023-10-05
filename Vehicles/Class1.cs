@@ -36,7 +36,7 @@ namespace Vehicles
 
     }
 
-    public class FreightTrain : Train
+    public class FreightTrain : Train, IHeavyLoadCarrier
     {
 
     }
