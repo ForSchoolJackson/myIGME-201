@@ -10,6 +10,15 @@ namespace Traffic
     {
         static void Main(string[] args)
         {
+            AddPassenger(new Compact());
+            AddPassenger(new SUV());
+            AddPassenger(new PassengerTrain());
+            AddPassenger(new Pickup());
+            
         }
-    }
+
+        static void AddPassenger(IPassengerCarrier Vehicle)
+        {
+            Console.WriteLine(Vehicle.ToString());
+        }
 }
