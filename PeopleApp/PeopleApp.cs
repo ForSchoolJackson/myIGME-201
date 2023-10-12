@@ -25,7 +25,7 @@ namespace PeopleApp
             while (sAction != "quit")
             {
                 Console.WriteLine();
-
+            
                 Console.Write("Add, Edit, Delete, List, Live, Quit => ");
                 sAction = Console.ReadLine().ToLower();
 
@@ -121,14 +121,8 @@ namespace PeopleApp
                                 // gpa only belongs to Student, so we need a Student reference variable to output that
                                 Student student = (Student)thisPerson;
                                 Console.WriteLine($"{student.gpa}");
-                                //iterate through each coaurse
-                                foreach (string thisCourse in courses.sortedList)
-                                {
-                                      //Console.Write($"{thisCourse.schedule.startTime:hh:mmtt}");
-                                    
-                                    
-                                }
-                               
+
+                                
 
                             }
 
@@ -140,6 +134,8 @@ namespace PeopleApp
                             }
                             ++i;
                         }
+
+                        
 
                         break;
 
