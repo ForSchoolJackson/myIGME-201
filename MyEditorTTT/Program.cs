@@ -18,5 +18,5 @@ namespace MyEditor
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MyEditorParent());
         }
-    }
+    }//wwww
 }
