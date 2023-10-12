@@ -27,7 +27,7 @@ namespace PE12_3
     }
 
     //child class fo MyCLass
-    class MyDerivedClass : MyClass
+    public class MyDerivedClass : MyClass
     {
         //ovveride the old GetString from parent to change it 
         public override string GetString()
@@ -37,7 +37,7 @@ namespace PE12_3
     }
 
     //program class
-    class Program
+   public class Program
     {
         static void Main(string[] args)
         {
