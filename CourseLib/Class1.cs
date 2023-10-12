@@ -1,36 +1,75 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CourseLib
 {
+    //Schedule class
+    public class Schedule
+    {
+        //time feilds
+        public DateTime startTime;
+        public DateTime endTime;
+
+        //days of week field list
+        public List<DayOfWeek> daysOfWeek = new List<DayOfWeek>();
+
+    }
+    //Courses class
     public class Courses
     {
-        SortedList<string, Course> sortedList = new SortedList<string, Course>();
+        //sorted list feild
+        public SortedList<string, Course> sortedList = new SortedList<string, Course>();
 
+        //corse code field
+        //must use try catch for get and set proterties of feild
         public Course this[string courseCode]
         {
             get
             {
-                Course retrunVal;
+                Course returnVal;
                 try
                 {
                     returnVal = (Course)sortedList[courseCode];
                 }
                 catch
                 {
-                    retrunVal = null;
+                    returnVal = null;
                 }
-                return (retrunVal);
+
+                return (returnVal);
             }
+
             set
             {
-
+                try
+                {
+                    // we can add to the list using these 2 methods
+                    //      sortedList.Add(email, value);
+                    sortedList[courseCode] = value;
+                }
+                catch
+                {
+                    // an exception will be raised if an entry with a duplicate key is added
+                    // duplicate key handling
+                }
             }
         }
 
+        //remove course method
+        public void Remove(string courseCode)
+        {
+            //only is not null
+            if (courseCode != null)
+            {
+                sortedList.Remove(courseCode);
+            }
+        }
+
+        //defult constructor
         public Courses()
         {
             Course thisCourse;
@@ -71,8 +110,24 @@ namespace CourseLib
                 this[thisCourse.courseCode] = thisCourse;
             }
         }
+    }
+
+    //course class
+    //related to but no derived from other classes
+    public class Course
+    {
+        //feilds
+        public string courseCode;
+        public string description;
+        public string teacherEmail;
+        public Schedule schedule;
 
 
+        //Course constructor
+        public Course(string courseCode, string description)
+        {
+        }
 
     }
+
 }
