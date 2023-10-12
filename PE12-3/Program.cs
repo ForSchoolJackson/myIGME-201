@@ -10,19 +10,20 @@ namespace PE12_3
     public class MyClass
     {
         private string myString;
-
+        //get string method
         public virtual string GetString()
         {
             return myString;
         }
-        public string MyString
+        //write only feild for my string
+           public string MyString
         {
             set
             {
                 myString = value;
             }
         }
-
+     
     }
 
     //child class fo MyCLass
@@ -40,8 +41,9 @@ namespace PE12_3
     {
         static void Main(string[] args)
         {
+            //instantiate the child class
             MyDerivedClass myDeriv = new MyDerivedClass();
-
+            //write the line on console
             Console.WriteLine(myDeriv.GetString());
 
 
