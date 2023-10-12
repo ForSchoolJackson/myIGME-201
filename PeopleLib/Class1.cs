@@ -108,8 +108,11 @@ namespace PeopleLib
 
     public class Student : Person, IPerson, IStudent, ICourseList
     {
+
+        //gps feild
         public double gpa;
         public collegeYear eCollegeYear;
+        //course codes list field
         public List<string> courseCodes = new List<string>();
 
         public List<String> CourseList
@@ -155,11 +158,13 @@ namespace PeopleLib
             return (s1.gpa != s2.gpa);
         }
 
+        //eat method
         public void Eat()
         {
             Console.WriteLine("Order a pizza!");
         }
 
+        //party method
         public void Party()
         {
             Console.WriteLine("Party on dude");
