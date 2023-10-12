@@ -15,8 +15,8 @@ namespace PE12_3
         {
             return myString;
         }
-        //write only feild for my string
-           public string MyString
+        //write only property for my string
+           public string MyStringProp
         {
             set
             {
