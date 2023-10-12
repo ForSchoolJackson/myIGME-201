@@ -73,31 +73,31 @@
             // newSearchToolStripMenuItem
             // 
             this.newSearchToolStripMenuItem.Name = "newSearchToolStripMenuItem";
-            this.newSearchToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.newSearchToolStripMenuItem.Size = new System.Drawing.Size(206, 34);
             this.newSearchToolStripMenuItem.Text = "&New Search";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(206, 34);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // closeAllToolStripMenuItem
             // 
             this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(206, 34);
             this.closeAllToolStripMenuItem.Text = "&Close All";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(203, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(206, 34);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // windowToolStripMenuItem
@@ -140,7 +140,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GifFinder";
-            this.Text = "Form1";
+            this.Text = "GifFinder";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

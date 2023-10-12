@@ -37,6 +37,7 @@ namespace GifFinder
             timer1.Interval = 100;
             timer1.Tick += new EventHandler(Timer1_Tick);
 
+            webBrowser1.ScriptErrorsSuppressed = true;
             webBrowser1.Navigate("https://people.rit.edu/dxsigm/gif-finder.html");
 
             this.tileToolStripMenuItem.Click += new EventHandler(TileToolStripMenuItem_Click);
