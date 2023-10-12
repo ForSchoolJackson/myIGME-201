@@ -46,7 +46,7 @@ namespace GifFinder
             this.newSearchToolStripMenuItem.Click += new EventHandler(NewSearchToolStripMenuItem_Click);
         }
 
-
+        
         private void TileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileHorizontal);
