@@ -126,8 +126,14 @@ namespace PeopleApp
                                 //course codes that belong to students
                                 foreach (string code in student.courseCodes)
                                 {
-                                    Console.WriteLine(code);
-                                    //i cant figure out how to iterate through the description days and start/end times
+                                    Console.Write(code+ "-" );
+                                    Console.Write("Description for " + code );
+                                    Console.WriteLine("");
+                                    //i cant figure out how to iterate through the days and start/end times
+                                   // foreach(string day in schedule.daysOfWeek)
+                                    //{
+
+                                    //}
                                    
                                   
                                 }
