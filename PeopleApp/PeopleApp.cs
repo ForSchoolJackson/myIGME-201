@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using PeopleLib;
 using CourseLib;
+using System.Runtime.CompilerServices;
 
 namespace PeopleApp
 {
@@ -122,7 +123,15 @@ namespace PeopleApp
                                 Student student = (Student)thisPerson;
                                 Console.WriteLine($"{student.gpa}");
 
-                                //
+                                //course codes that belong to students
+                                foreach (string code in student.courseCodes)
+                                {
+                                    Console.WriteLine(code);
+                                    //i cant figure out how to iterate through the description days and start/end times
+                                   
+                                  
+                                }
+                                
 
                             }
 
