@@ -122,7 +122,7 @@ namespace PeopleApp
                                 Student student = (Student)thisPerson;
                                 Console.WriteLine($"{student.gpa}");
 
-                                
+                                //
 
                             }
 
