@@ -235,8 +235,8 @@ namespace PeopleApp
 
                 do
                 {
-                    thisStudent.courseCodes = null;
-                    Console.Write($"Course Code ({thisStudent.courseCodes})=> ");
+                   
+                    Console.Write($"Course Code ({thisStudent.courseCodes.Count})=> ");
                     string sCourseCodes = Console.ReadLine();
                     if (sCourseCodes.Length > 0)
                     {
