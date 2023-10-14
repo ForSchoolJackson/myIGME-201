@@ -244,6 +244,7 @@ namespace PetApp
                     //50/50 between cats and dogs
                     if (rand.Next(0, 2) == 0)
                     {
+                        Console.WriteLine("");
                         Console.WriteLine("You bought a dog!");
                         // add a dog
                         dog = new Dog(null,  null, 0);
@@ -298,7 +299,9 @@ namespace PetApp
                     else
                     {
                         // else add a cat
+                        Console.WriteLine("");
                         Console.WriteLine("You bought a cat!");
+
                         cat = new Cat();
                         pets.Add(cat);
 
@@ -344,7 +347,7 @@ namespace PetApp
                     //if none exit go back to top
                     if(thisPet == null)
                     {
-                        Console.WriteLine("none");
+                        //Console.WriteLine("none");----test
                     }
                     //is there is one
                     else
@@ -353,13 +356,52 @@ namespace PetApp
                         if(thisPet.GetType() == typeof(Dog))
                         {
                             iDog = (Dog)thisPet;
-                            Console.WriteLine("dog do something");
+                            //Console.WriteLine("dog do something");--test
+                            if (rand.Next(0, 5) == 0)
+                            {
+                                dog.Eat();
+                            }
+                            else if (rand.Next(0, 5) == 1)
+                            {
+                                dog.Play();
+                            }
+                            else if (rand.Next(0, 5) == 2)
+                            {
+                                dog.Bark();
+                            }
+                            else if (rand.Next(0, 5) == 3)
+                            {
+                                dog.NeedWalk();
+                            }
+                            else if (rand.Next(0, 5) == 4)
+                            {
+                                dog.GotoVet();
+                            }
+
                         }
                         //check if cat
                         if (thisPet.GetType() == typeof(Cat))
                         {
                             iCat = (Cat)thisPet;
-                            Console.WriteLine("cat do something");
+                            //Console.WriteLine("cat do something");----test
+
+                            //randomly call on methods
+                            if (rand.Next(0, 4) == 0)
+                            {
+                                cat.Eat();
+                            }else if (rand.Next(0, 4) == 1)
+                            {
+                                cat.Play();
+                            }
+                            else if (rand.Next(0, 4) == 2)
+                            {
+                                cat.Scratch();
+                            }
+                            else if (rand.Next(0, 4) == 3)
+                            {
+                                cat.Purr();
+                            }
+                            
 
                         }
                     }
