@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace PetApp
 {
@@ -232,6 +234,7 @@ namespace PetApp
             //iterate 50 times
             for(int i =0; i < 50; i++)
             {
+                Console.WriteLine("start");
                 // Console.WriteLine(i);-----test if 50 times
 
                 //genberate random number 1 to 10
@@ -243,27 +246,113 @@ namespace PetApp
                     {
                         Console.WriteLine("You bought a dog!");
                         // add a dog
-                        pets.Add(dog);
+                        dog = new Dog(null,  null, 0);
 
                         //promt user for feilds
-                        Console.Write("Dogs Name: ");
-                        thisPet.Name = Console.ReadLine();
-                        Console.Write("Age: ");
-                        thisPet.age = Console.ReadLine();
-                        Console.Write("License: ");
-                        dog.license = Console.ReadLine();
+                        //NAME feild
+                        do
+                        {
+                           Console.Write("Name: ");
+                            string sName = Console.ReadLine();
+                            if (sName.Length > 0)
+                            {
+                                dog.Name = sName;
+                                break;
+                            }
+
+                        } while (true);
+
+                        //AGE feild
+                        do
+                        {
+                            Console.Write("Age: ");
+                            string sAge = Console.ReadLine();
+                            if (sAge.Length > 0)
+                            {
+                                if (int.TryParse(sAge, out dog.age))
+                                {
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        } while (true);
+
+                        //LICENSE feild
+                        do
+                        {
+                            Console.Write("License: ");
+                           string sLic = Console.ReadLine();
+                            if (sLic.Length>0)
+                            {
+                                dog.license = sLic;
+                                break;
+                            }
+                            
+                        } while (true);
 
                     }
                     else
                     {
                         // else add a cat
-                        pets.Add(cat);
+                        Console.WriteLine("You bought a cat!");
+                        cat = new Cat();
+                        //NAME feild
+                        do
+                        {
+                            Console.Write("Name: ");
+                            string sName = Console.ReadLine();
+                            if (sName.Length > 0)
+                            {
+                                cat.Name = sName;
+                                break;
+                            }
+
+                        } while (true);
+
+                        //AGE feild
+                        do
+                        {
+                            Console.Write("Age: ");
+                            string sAge = Console.ReadLine();
+                            if (sAge.Length > 0)
+                            {
+                                if (int.TryParse(sAge, out cat.age))
+                                {
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        } while (true);
+
 
                     }
                 }
                 else
                 {
                     // choose a random pet from pets and choose a random activity for the pet to do
+                    thisPet =  pets[rand.Next(0,pets.Count)];
+
+                    if(thisPet == null)
+                    {
+                        
+                    }
+                    else
+                    {
+                        if(thisPet.GetType() == typeof(Dog))
+                        {
+                            iDog = (Dog)thisPet;
+                        }
+                        if (thisPet.GetType() == typeof(Cat))
+                        {
+                            iCat = (Cat)thisPet;
+                        }
+                    }
                 }
             }
 
