@@ -234,7 +234,7 @@ namespace PetApp
             //iterate 50 times
             for(int i =0; i < 50; i++)
             {
-                Console.WriteLine("start");
+                
                 // Console.WriteLine(i);-----test if 50 times
 
                 //genberate random number 1 to 10
@@ -247,6 +247,7 @@ namespace PetApp
                         Console.WriteLine("You bought a dog!");
                         // add a dog
                         dog = new Dog(null,  null, 0);
+                        pets.Add(dog);
 
                         //promt user for feilds
                         //NAME feild
@@ -299,6 +300,8 @@ namespace PetApp
                         // else add a cat
                         Console.WriteLine("You bought a cat!");
                         cat = new Cat();
+                        pets.Add(cat);
+
                         //NAME feild
                         do
                         {
@@ -338,19 +341,26 @@ namespace PetApp
                     // choose a random pet from pets and choose a random activity for the pet to do
                     thisPet =  pets[rand.Next(0,pets.Count)];
 
+                    //if none exit go back to top
                     if(thisPet == null)
                     {
-                        
+                        Console.WriteLine("none");
                     }
+                    //is there is one
                     else
                     {
+                        //check if dog
                         if(thisPet.GetType() == typeof(Dog))
                         {
                             iDog = (Dog)thisPet;
+                            Console.WriteLine("dog do something");
                         }
+                        //check if cat
                         if (thisPet.GetType() == typeof(Cat))
                         {
                             iCat = (Cat)thisPet;
+                            Console.WriteLine("cat do something");
+
                         }
                     }
                 }
