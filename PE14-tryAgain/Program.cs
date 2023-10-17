@@ -34,16 +34,15 @@ namespace PE14
         //main
         static void Main(string[] args)
         {
-            //call on the MyMethod method for each
-            public static void MyMethod(object myObject)
-            {
-                myObject.IClass.MyString();
-            }
-
             //create object of both classes
             ClassOne objOne = new ClassOne();
             ClassTwo objTwo = new ClassTwo();
 
+            //call on the MyMethod method for each
+            public static void MyMethod(object myObject)
+            {
+                IClass.myObject.MyString();
+            }
 
             //call my method
             MyMethod(objOne);
