@@ -8,24 +8,25 @@ namespace PE14
 {
     public interface IClass
     {
-        void MyMethod(object MyObject);
+        void MyString();
     }
 
-    public class ClassOne: IClass
+    public class ClassOne : IClass
     {
-        public void MyMethod(object myObject)
+        public void MyString()
         {
-            Console.WriteLine(myObject);
+            Console.WriteLine("String for class one.");
         }
     }
 
     public class ClassTwo : IClass
     {
-        public void MyMethod(object myObject)
+        public void MyString()
         {
-            Console.WriteLine(myObject);
+            Console.WriteLine("String for class two.");
         }
     }
+
 
     //program class
     internal class Program
@@ -33,13 +34,21 @@ namespace PE14
         //main
         static void Main(string[] args)
         {
+            //call on the MyMethod method for each
+            public static void MyMethod(object myObject)
+            {
+                IClass.MyString();
+            }
+
             //create object of both classes
             ClassOne objOne = new ClassOne();
             ClassTwo objTwo = new ClassTwo();
+            
 
-            //call on the MyMethod method for each
-            objOne.MyMethod(objOne);
-            objTwo.MyMethod(objTwo);
+            //call my method
+            MyMethod(objOne);
+            MyMethod(objTwo);
+
 
         }
     }
