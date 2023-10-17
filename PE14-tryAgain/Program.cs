@@ -50,7 +50,7 @@ namespace PE14
         public static void MyMethod(object myObject)
         {
             IClass iClass = (IClass)myObject;
-            myObject.MyString();
+            iClass.MyString();
         }
     }
 }
