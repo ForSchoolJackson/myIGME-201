@@ -16,7 +16,7 @@ namespace Traffic
         //using the vehicles lib create a function
         static void Main(string[] args)
         {
-<<<<<<< HEAD
+
             AddPassenger(new Compact());
             AddPassenger(new SUV());
             AddPassenger(new PassengerTrain());
@@ -28,7 +28,7 @@ namespace Traffic
         {
             Console.WriteLine(Vehicle.ToString());
         }
-=======
+
 
            
         }
@@ -41,5 +41,5 @@ namespace Traffic
         }
 
     }
->>>>>>> new one
+
 }
