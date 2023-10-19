@@ -12,7 +12,7 @@ namespace Vehicles
     //passanger carry interface
     public interface IPassengerCarrier
     {
-        
+        void LoadPassenger();
 
     }
 
