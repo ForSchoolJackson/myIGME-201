@@ -23,22 +23,19 @@ namespace Traffic
             AddPassenger(new Pickup());
             
         }
-
-        static void AddPassenger(IPassengerCarrier Vehicle)
+        //function to add passengers to
+        public static void AddPassenger(IPassengerCarrier vehicle)
         {
-            Console.WriteLine(Vehicle.ToString());
+            //call load passenger method
+            vehicle.LoadPassenger();
+            //write out the toString vehice
+            Console.WriteLine(vehicle.ToString());
         }
 
 
            
-        }
 
-        //function to add passengers to 
-        public void AddPassenger(Vehicle vehicleObject)
-        {
-            //vehicleObject.LoadPassenger();
-            Console.WriteLine(vehicleObject.ToString());
-        }
+      
 
     }
 
