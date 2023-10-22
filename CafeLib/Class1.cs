@@ -44,6 +44,7 @@ namespace CafeLib
             {
 
             }
+            
             public abstract void Steam();
 
             //constructors
