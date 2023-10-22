@@ -44,10 +44,7 @@ namespace CafeLib
             {
 
             }
-            public abstract void Steam()
-            {
-
-            }
+            public abstract void Steam();
 
             //constructors
             public HotDrink()
