@@ -44,7 +44,7 @@ namespace CafeLib
             {
 
             }
-            public virtual void Steam()
+            public abstract void Steam()
             {
 
             }
