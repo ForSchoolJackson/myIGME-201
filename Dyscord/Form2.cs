@@ -23,7 +23,7 @@ namespace Dyscord
     {
 
         string targetUser = "";
-        string targetIP = "";
+        string targetIp = "";
         int targetPort;
         string myIp = "";
         int myPort = 2222;
@@ -104,7 +104,7 @@ namespace Dyscord
 
             title = htmlElement.GetAttribute("title");
             ipPort = title.Split(':');
-            this.targetIP = ipPort[0];
+            this.targetIp = ipPort[0];
             this.targetPort = Int32.Parse(ipPort[1]);
 
             this.targetUser = htmlElement.GetAttribute("name");
@@ -117,9 +117,9 @@ namespace Dyscord
         //send the message to the ip adreess
         private void SendButton__Click(object sender, EventArgs e)
         {
-            if(targetIP.Length > 0)
+            if(targetIp.Length > 0)
             {
-                IPAddress iPAddress = IPAddress.Parse(this.targetIP);
+                IPAddress iPAddress = IPAddress.Parse(this.targetIp);
                 IPEndPoint remoteEndPoint = new IPEndPoint(iPAddress, this.targetPort);
 
                 //use socket to connect
