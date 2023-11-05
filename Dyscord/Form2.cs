@@ -117,7 +117,7 @@ namespace Dyscord
         //send the message to the ip adreess
         private void SendButton__Click(object sender, EventArgs e)
         {
-            if(targetIp.Length > 0)
+            if(this.targetIp.Length > 0)
             {
                 IPAddress iPAddress = IPAddress.Parse(this.targetIp);
                 IPEndPoint remoteEndPoint = new IPEndPoint(iPAddress, this.targetPort);
@@ -140,7 +140,7 @@ namespace Dyscord
                 server.Close();
 
                 //show it was sent
-                this.convRichTextBox.Text += ". " + this.targetUser + ": " + msgRichTextBox.Text + "\n";
+                this.convRichTextBox.Text += "> " + this.targetUser + ": " + msgRichTextBox.Text + "\n";
 
                 //clear text box
                 msgRichTextBox.Clear();
