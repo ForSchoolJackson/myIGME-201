@@ -26,7 +26,7 @@ namespace Dyscord
         string targetIP = "";
         int targetPort;
         string myIp = "";
-        int myPort = 2223;
+        int myPort = 2222;
         Thread thread;
         Socket listener;
         public DyscordForm()
