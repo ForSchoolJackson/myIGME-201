@@ -49,7 +49,7 @@ namespace Dyscord
             IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
             foreach(IPAddress iPAddress in ipHost.AddressList)
             {
-                if(iPAddress.AddressFamily = AddressFamily.InterNetwork)
+                if(iPAddress.AddressFamily == AddressFamily.InterNetwork)
                 {
                     this.myIp = iPAddress.ToString();
                     break;
