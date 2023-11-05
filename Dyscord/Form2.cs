@@ -22,10 +22,10 @@ namespace Dyscord
     public partial class DyscordForm : Form
     {
 
-        string targetUser;
-        string targetIP;
+        string targetUser = "";
+        string targetIP = "";
         int targetPort;
-        string myIp;
+        string myIp = "";
         int myPort = 2223;
         Thread thread;
         Socket listener;
@@ -114,6 +114,48 @@ namespace Dyscord
             webBrowser1.SendToBack();
         }
 
+        //send the message to the ip adreess
+        private void SendButton__Click(object sender, EventArgs e)
+        {
+            if(targetIP.Length > 0)
+            {
+                IPAddress iPAddress = IPAddress.Parse(this.targetIP);
+                IPEndPoint remoteEndPoint = new IPEndPoint(iPAddress, this.targetPort);
+
+                //use socket to connect
+                Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                server.Connect(remoteEndPoint);
+                //create network stream
+                Stream netStream = new NetworkStream(server);
+                //streeam writer to write to the stream
+                StreamWriter writer = new StreamWriter(netStream);
+
+                //write maeeseg
+                string msg = userTextBox.Text + ": " + msgRichTextBox.Text;
+                writer.Write(msg.ToCharArray(), 0, msg.Length);
+
+                //close
+                writer.Close();
+                netStream.Close();
+                server.Close();
+
+                //show it was sent
+                this.convRichTextBox.Text += ". " + this.targetUser + ": " + msgRichTextBox.Text + "\n";
+
+                //clear text box
+                msgRichTextBox.Clear();
+
+            }
+        }
+            private void ExitButton__Click(object sender, EventArgs e)
+            {
+               //clean up 
+               listener.Close();
+               thread.Abort();
+
+               Application.Exit();
+            }
+  
         //add message recieved to convo text box
         public void UpdateConversation(string text)
         {
