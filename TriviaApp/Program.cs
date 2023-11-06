@@ -83,7 +83,7 @@ namespace TriviaApp
             Console.Write("Answer: ");
             Console.ReadLine();
 
-            Console.WriteLine("NGL, you could be right or wrong IDK.");
+            Console.WriteLine("NGL, I dont know if thats correct.");
 
 
 
