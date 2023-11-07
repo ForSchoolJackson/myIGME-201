@@ -20,14 +20,31 @@ namespace EditPerson
         {
             InitializeComponent();
 
-            this.freshRadioButton.CheckedChanged += new EventHandler(FreshRadioButton__CheckedChanged);
-            this.sophRadioButton.CheckedChanged += new EventHandler(SophRadioButton__CheckedChanged);
-            this.juniorRadioButton.CheckedChanged += new EventHandler(JuniorRadioButton__CheckedChanged);
-            this.seniorRadioButton.CheckedChanged += new EventHandler(SeniorRadioButton__CheckedChanged);
+            this.freshRadioButton.CheckedChanged += new EventHandler(ClassRadioButton__CheckedChanged);
+            this.sophRadioButton.CheckedChanged += new EventHandler(ClassRadioButton__CheckedChanged);
+            this.juniorRadioButton.CheckedChanged += new EventHandler(ClassRadioButton__CheckedChanged);
+            this.seniorRadioButton.CheckedChanged += new EventHandler(ClassRadioButton__CheckedChanged);
 
-            this.himRadioButton.CheckedChanged += new EventHandler(HimRadioButton__CheckedChanged);
-            this.herRadioButton.CheckedChanged += new EventHandler(HerRadioButton__CheckedChanged);
-            this.themRadioButton.CheckedChanged += new EventHandler(ThemRadioButton__CheckedChanged);
+           // this.himRadioButton.CheckedChanged += new EventHandler(HimRadioButton__CheckedChanged);
+           // this.herRadioButton.CheckedChanged += new EventHandler(HerRadioButton__CheckedChanged);
+           // this.themRadioButton.CheckedChanged += new EventHandler(ThemRadioButton__CheckedChanged);
+
+            switch (person.eGender)
+            {
+                case genderPronoun.him:
+                    this.himRadioButton.Checked = true;
+                    break;
+
+                case genderPronoun.her:
+                    this.herRadioButton.Checked = true;
+                    break;
+
+                case genderPronoun.them:
+                default:
+                    this.themRadioButton.Checked = true;
+                    break;
+
+            }
 
             foreach (Control control in this.Controls)
             {
@@ -188,6 +205,27 @@ namespace EditPerson
                 this.typeComboBox.SelectedIndex = 0;
                 Student student = (Student)person;
                 this.gpaText.Text = student.gpa.ToString();
+
+                switch (student.eCollegeYear)
+                {
+                    case collegeYear.freshman:
+                        this.freshRadioButton.Checked = true;
+                        break;
+
+                    case collegeYear.sophomore:
+                        this.sophRadioButton.Checked = true;
+                        break;
+
+                    case collegeYear.junior:
+                        this.juniorRadioButton.Checked = true;
+                        break;
+
+                    case collegeYear.senior:
+                    default:
+                        this.seniorRadioButton.Checked = true;
+                        break;
+
+                }
             }
             else
             {
@@ -197,6 +235,31 @@ namespace EditPerson
             }
 
             this.Show();
+        }
+
+        private void ClassRadioButton__CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = (RadioButton)sender;
+
+            if (rb.Checked)
+            {
+                if(rb == this.freshRadioButton)
+                {
+                    this.classOfLabel.Text = "Class of 2027";
+                }
+                else if(rb == this.sophRadioButton)
+                {
+                    this.classOfLabel.Text = "Class of 2026";
+                }
+                else if (rb == this.juniorRadioButton)
+                {
+                    this.classOfLabel.Text = "Class of 2025";
+                }
+                else if (rb == this.seniorRadioButton)
+                {
+                    this.classOfLabel.Text = "Class of 2024";
+                }
+            }
         }
 
         // the Event Handler for changing the typeComboBox value (Student or Teacher)
@@ -221,6 +284,9 @@ namespace EditPerson
                 this.gpaText.Visible = true;
 
                 this.gpaText.Tag = (this.gpaText.Text.Length > 0);
+
+                this.classGroupBox.Visible = true;
+                
             }
             else
             {
@@ -237,6 +303,9 @@ namespace EditPerson
                 this.gpaText.Visible = false;
 
                 this.gpaText.Tag = true;
+
+                this.classGroupBox.Visible = false;
+
             }
         }
 
@@ -355,9 +424,40 @@ namespace EditPerson
             person.age = Convert.ToInt32(this.ageText.Text);
             person.LicenseId = Convert.ToInt32(this.licText.Text);
 
-            if( person.GetType() == typeof( Student))
+            //gender radio change thing idk
+            if (this.himRadioButton.Checked)
+            {
+                person.eGender = genderPronoun.him;
+            }
+            else if (this.herRadioButton.Checked)
+            {
+                person.eGender = genderPronoun.her;
+            }
+            else if (this.themRadioButton.Checked)
+            {
+                person.eGender = genderPronoun.them;
+            }
+
+            if ( person.GetType() == typeof( Student))
             {
                 student.gpa = Convert.ToDouble(this.gpaText.Text);
+
+                if (this.freshRadioButton.Checked)
+                {
+                    student.eCollegeYear = collegeYear.freshman;
+                }
+                else if (this.sophRadioButton.Checked)
+                {
+                    student.eCollegeYear = collegeYear.sophomore;
+                }
+                else if (this.juniorRadioButton.Checked)
+                {
+                    student.eCollegeYear = collegeYear.junior;
+                }
+                else if (this.seniorRadioButton.Checked)
+                {
+                    student.eCollegeYear = collegeYear.senior;
+                }
             }
             else
             {
@@ -403,6 +503,11 @@ namespace EditPerson
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PersonEditForm_Load(object sender, EventArgs e)
         {
 
         }
