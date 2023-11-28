@@ -12,6 +12,9 @@ namespace MultiFroms
 {
     public partial class GameForm : Form
     {
+
+        int nRandom;
+
         public GameForm(int lowNumber, int highNumber)
         {
             InitializeComponent();
@@ -25,7 +28,11 @@ namespace MultiFroms
 
             //generate random number
             Random rand = new Random();
-            int nRandom = rand.Next(lowNumber, highNumber);
+            nRandom = rand.Next(lowNumber, highNumber);
+
+
+
+            this.progressBar1.Value = 90;
 
         }
 
@@ -39,7 +46,10 @@ namespace MultiFroms
             if (this.progressBar1.Value == 0)
             {
                 this.timer.Stop();
-         
+
+                // show a dialog that the numbers are not valid
+                MessageBox.Show("Out of time! The answer was "+ nRandom);
+
             }
 
         }

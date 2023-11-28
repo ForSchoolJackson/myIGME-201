@@ -27,11 +27,11 @@ namespace MultiFroms
 
             // convert the strings entered in lowTextBox and highTextBox
             // to lowNumber and highNumber Int32.Parse
-            lowNumber = Int32.Parse(this.highTextBox.Text);
+            lowNumber = Int32.Parse(this.lowTextBox.Text);
             highNumber = Int32.Parse(this.highTextBox.Text);
 
             // if not a valid range
-            if ( lowNumber>= highNumber )
+            if ( lowNumber >= highNumber )
             {
                 // show a dialog that the numbers are not valid
                 MessageBox.Show("The numbers are invalid.");
