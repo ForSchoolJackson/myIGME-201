@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace MultiFroms
 {
@@ -17,6 +18,8 @@ namespace MultiFroms
             InitializeComponent();
 
             this.startButton.Click += new EventHandler(StartButton_Click);
+            this.lowTextBox.KeyPress += new KeyPressEventHandler(TextBox_KeyPress);
+            this.highTextBox.KeyPress += new KeyPressEventHandler(TextBox_KeyPress);
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -47,6 +50,16 @@ namespace MultiFroms
                 // which makes the first form inactive
                 gameForm.ShowDialog();
             }
+        }
+
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
         }
 
 
