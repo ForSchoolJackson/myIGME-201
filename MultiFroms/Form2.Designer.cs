@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.currectGuessTextBox = new System.Windows.Forms.TextBox();
+            this.guessTextBox = new System.Windows.Forms.TextBox();
             this.guessButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guessLabel = new System.Windows.Forms.Label();
@@ -38,12 +38,12 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // currectGuessTextBox
+            // guessTextBox
             // 
-            this.currectGuessTextBox.Location = new System.Drawing.Point(262, 50);
-            this.currectGuessTextBox.Name = "currectGuessTextBox";
-            this.currectGuessTextBox.Size = new System.Drawing.Size(69, 20);
-            this.currectGuessTextBox.TabIndex = 0;
+            this.guessTextBox.Location = new System.Drawing.Point(262, 50);
+            this.guessTextBox.Name = "guessTextBox";
+            this.guessTextBox.Size = new System.Drawing.Size(69, 20);
+            this.guessTextBox.TabIndex = 0;
             // 
             // guessButton
             // 
@@ -101,7 +101,7 @@
             this.Controls.Add(this.guessLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guessButton);
-            this.Controls.Add(this.currectGuessTextBox);
+            this.Controls.Add(this.guessTextBox);
             this.Name = "GameForm";
             this.Text = "Guesses";
             this.ResumeLayout(false);
@@ -111,7 +111,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox currectGuessTextBox;
+        private System.Windows.Forms.TextBox guessTextBox;
         private System.Windows.Forms.Button guessButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label guessLabel;

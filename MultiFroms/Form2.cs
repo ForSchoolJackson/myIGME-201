@@ -14,6 +14,7 @@ namespace MultiFroms
     {
 
         int nRandom;
+        int nGuesses;
 
         public GameForm(int lowNumber, int highNumber)
         {
@@ -25,14 +26,15 @@ namespace MultiFroms
             //event hndler 
             this.timer.Tick += new EventHandler(Timer_Tick);
             this.guessButton.Click += new EventHandler(guessButton_Click);
+            this.guessTextBox.KeyPress += new KeyPressEventHandler(TextBox_KeyPress);
 
             //generate random number
             Random rand = new Random();
             nRandom = rand.Next(lowNumber, highNumber);
 
 
-
             this.progressBar1.Value = 90;
+            nGuesses = 0;
 
         }
 
@@ -54,8 +56,40 @@ namespace MultiFroms
 
         }
 
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+
         private void guessButton_Click(object sender, EventArgs e)
         {
+            nGuesses++;
+
+            int guess = Int32.Parse(this.guessTextBox.Text);
+
+            if (guess > nRandom)
+            {
+                guessLabel.Text = guess + " Is too high.";
+            }
+            if(guess < nRandom)
+            {
+                guessLabel.Text = guess + " Is too low.";
+            }
+            if(guess == nRandom)
+            {
+                timer.Stop();
+                MessageBox.Show($"Woohoo, you got it in {nGuesses} guesses!");
+
+                this.Close();
+
+            }
+
+
 
         }
     }
