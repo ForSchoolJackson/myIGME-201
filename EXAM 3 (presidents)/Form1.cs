@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using System.Xml.Linq;
 
 namespace EXAM_3__presidents_
 {
@@ -57,11 +60,22 @@ namespace EXAM_3__presidents_
                 //change web broser based on radio buttons
                 this.webBrowser.Url = new System.Uri(link);
 
-                if(selectedRadioButton.Text == "Barack Obama")
+
+                string imagePath;
+
+                //barack obama is a png instead
+                if (selectedRadioButton.Text == "Barack Obama")
                 {
-                    this.pictureBox.Image = Image.FromFile("Images/BarackObama,png");
+                    imagePath = $"Images/{selectedRadioButton.Text.Replace(" ", "")}.png";
+                }
+                //for all the other jpgs
+                else
+                {
+                    imagePath = $"Images/{selectedRadioButton.Text.Replace(" ", "")}.jpeg";
                 }
 
+                //change image in picture box
+                this.pictureBox.Image = System.Drawing.Image.FromFile(imagePath);
 
             }
         }
@@ -73,9 +87,25 @@ namespace EXAM_3__presidents_
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void button2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Form_Load(object sender, EventArgs e)
