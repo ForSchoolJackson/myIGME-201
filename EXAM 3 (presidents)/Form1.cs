@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
-using System.Xml.Linq;
 
 namespace EXAM_3__presidents_
 {
@@ -39,6 +28,22 @@ namespace EXAM_3__presidents_
             this.radioButtonTR.CheckedChanged += new EventHandler(ClassRadioButton__CheckedChanged);
             this.radioButtonTJ.CheckedChanged += new EventHandler(ClassRadioButton__CheckedChanged);
 
+            //event handlers for filter radio buttons
+            this.radioButtonAll.CheckedChanged += new EventHandler(TypeRadioButton__CheckedChanged);
+            this.radioButtonDem.CheckedChanged += new EventHandler(TypeRadioButton__CheckedChanged);
+            this.radioButtonRep.CheckedChanged += new EventHandler(TypeRadioButton__CheckedChanged);
+            this.radioButtonDR.CheckedChanged += new EventHandler(TypeRadioButton__CheckedChanged);
+            this.radioButtonFed.CheckedChanged += new EventHandler(TypeRadioButton__CheckedChanged);
+
+            //text box event handlers
+            this.textBox1.KeyPress += new KeyPressEventHandler(TextBox_KeyPress);
+
+            //picture hnadlers
+            this.pictureBox.MouseEnter += new EventHandler(PictureBox__MouseEnter);
+            this.pictureBox.MouseLeave += new EventHandler(PictureBox__MouseLeave);
+
+            //exit
+            this.exitButton.Click += new EventHandler(ExitButton__Click);
 
         }
 
@@ -79,6 +84,66 @@ namespace EXAM_3__presidents_
 
             }
         }
+
+        private void TypeRadioButton__CheckedChanged(object sender, EventArgs e)
+        {
+            //based on the radio button currectly selected
+            RadioButton selectedRadioButton = sender as RadioButton;
+
+            if (selectedRadioButton.Checked)
+            {
+                if (selectedRadioButton == this.radioButtonAll)
+                {
+                   
+                }
+                else if (selectedRadioButton == this.radioButtonDem)
+                {
+                    
+                }
+                else if (selectedRadioButton == this.radioButtonRep)
+                {
+                   
+                }
+                else if (selectedRadioButton == this.radioButtonDR)
+                {
+                   
+                }
+                else if (selectedRadioButton == this.radioButtonFed)
+                {
+
+                }
+            }
+
+        }
+
+        private void PictureBox__MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox.BringToFront();
+            this.pictureBox.Width = 200;
+            this.pictureBox.Height = 300;
+        }
+
+        private void PictureBox__MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox.Width = 150;
+            this.pictureBox.Height = 170;
+        }
+
+        private void ExitButton__Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+
 
 
 

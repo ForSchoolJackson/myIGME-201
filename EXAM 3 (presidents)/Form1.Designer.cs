@@ -67,13 +67,13 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton19 = new System.Windows.Forms.RadioButton();
+            this.radioButtonAll = new System.Windows.Forms.RadioButton();
+            this.radioButtonFed = new System.Windows.Forms.RadioButton();
             this.radioButtonDR = new System.Windows.Forms.RadioButton();
             this.radioButtonRep = new System.Windows.Forms.RadioButton();
             this.radioButtonDem = new System.Windows.Forms.RadioButton();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.radioButtonAll = new System.Windows.Forms.RadioButton();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox.SuspendLayout();
@@ -406,7 +406,7 @@
             // groupBox
             // 
             this.groupBox.Controls.Add(this.radioButtonAll);
-            this.groupBox.Controls.Add(this.radioButton19);
+            this.groupBox.Controls.Add(this.radioButtonFed);
             this.groupBox.Controls.Add(this.radioButtonDR);
             this.groupBox.Controls.Add(this.radioButtonRep);
             this.groupBox.Controls.Add(this.radioButtonDem);
@@ -417,16 +417,28 @@
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Filter";
             // 
-            // radioButton19
+            // radioButtonAll
             // 
-            this.radioButton19.AutoSize = true;
-            this.radioButton19.Location = new System.Drawing.Point(6, 105);
-            this.radioButton19.Name = "radioButton19";
-            this.radioButton19.Size = new System.Drawing.Size(70, 17);
-            this.radioButton19.TabIndex = 3;
-            this.radioButton19.TabStop = true;
-            this.radioButton19.Text = "Federalist";
-            this.radioButton19.UseVisualStyleBackColor = true;
+            this.radioButtonAll.AutoSize = true;
+            this.radioButtonAll.Location = new System.Drawing.Point(8, 15);
+            this.radioButtonAll.Name = "radioButtonAll";
+            this.radioButtonAll.Size = new System.Drawing.Size(36, 17);
+            this.radioButtonAll.TabIndex = 4;
+            this.radioButtonAll.TabStop = true;
+            this.radioButtonAll.Text = "All";
+            this.radioButtonAll.UseVisualStyleBackColor = true;
+            this.radioButtonAll.CheckedChanged += new System.EventHandler(this.radioButton21_CheckedChanged);
+            // 
+            // radioButtonFed
+            // 
+            this.radioButtonFed.AutoSize = true;
+            this.radioButtonFed.Location = new System.Drawing.Point(6, 105);
+            this.radioButtonFed.Name = "radioButtonFed";
+            this.radioButtonFed.Size = new System.Drawing.Size(70, 17);
+            this.radioButtonFed.TabIndex = 3;
+            this.radioButtonFed.TabStop = true;
+            this.radioButtonFed.Text = "Federalist";
+            this.radioButtonFed.UseVisualStyleBackColor = true;
             // 
             // radioButtonDR
             // 
@@ -467,18 +479,7 @@
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(800, 23);
             this.progressBar.TabIndex = 37;
-            // 
-            // radioButtonAll
-            // 
-            this.radioButtonAll.AutoSize = true;
-            this.radioButtonAll.Location = new System.Drawing.Point(8, 15);
-            this.radioButtonAll.Name = "radioButtonAll";
-            this.radioButtonAll.Size = new System.Drawing.Size(36, 17);
-            this.radioButtonAll.TabIndex = 4;
-            this.radioButtonAll.TabStop = true;
-            this.radioButtonAll.Text = "All";
-            this.radioButtonAll.UseVisualStyleBackColor = true;
-            this.radioButtonAll.CheckedChanged += new System.EventHandler(this.radioButton21_CheckedChanged);
+            this.progressBar.Value = 100;
             // 
             // errorProvider
             // 
@@ -579,7 +580,7 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.RadioButton radioButton19;
+        private System.Windows.Forms.RadioButton radioButtonFed;
         private System.Windows.Forms.RadioButton radioButtonDR;
         private System.Windows.Forms.RadioButton radioButtonRep;
         private System.Windows.Forms.RadioButton radioButtonDem;
