@@ -56,7 +56,25 @@ namespace EXAM_3__presidents_
             this.textBox10.KeyPress += new KeyPressEventHandler(TextBox_KeyPress);
             this.textBox9.KeyPress += new KeyPressEventHandler(TextBox_KeyPress);
 
+            //for error checking incorrect
             this.textBox1.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox2.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox3.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox4.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox5.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox6.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox7.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox8.TextChanged += new EventHandler(TextBox_TextChanged);
+
+            this.textBox16.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox15.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox14.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox13.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox12.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox11.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox10.TextChanged += new EventHandler(TextBox_TextChanged);
+            this.textBox9.TextChanged += new EventHandler(TextBox_TextChanged);
+
 
 
 
@@ -268,29 +286,187 @@ namespace EXAM_3__presidents_
             //based on the radio button currectly selected
             TextBox selectedText = sender as TextBox;
 
-            //if null
-           // if(selectedText.Text == "")
-            //{
-          //      selectedText.Text = "0";
-           // }
-
             //set the errors for each president
-            if (this.textBox1.Text != "23")
+            if (selectedText == this.textBox1)
             {
-                this.errorProvider.SetError(textBox1, "Wrong");
+                if (this.textBox1.Text == "23")
+                {
+                    this.errorProvider.SetError(textBox1, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox1, "Wrong");
+                }
             }
-            else
+            else if(selectedText == this.textBox2)
             {
-                this.errorProvider.SetError(textBox1, "");
+                if (this.textBox2.Text == "32")
+                {
+                    this.errorProvider.SetError(textBox2, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox2, "Wrong");
+                }
             }
-            if (this.textBox2.Text != "")
+            else if (selectedText == this.textBox3)
             {
-                this.errorProvider.SetError(textBox1, "Wrong");
+                if (this.textBox3.Text == "42")
+                {
+                    this.errorProvider.SetError(textBox3, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox3, "Wrong");
+                }
             }
-            else
+            else if (selectedText == this.textBox4)
             {
-                this.errorProvider.SetError(textBox1, "");
+                if (this.textBox4.Text == "43")
+                {
+                    this.errorProvider.SetError(textBox4, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox4, "Wrong");
+                }
             }
+            else if (selectedText == this.textBox5)
+            {
+                if (this.textBox5.Text == "14")
+                {
+                    this.errorProvider.SetError(textBox5, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox5, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox6)
+            {
+                if (this.textBox6.Text == "15")
+                {
+                    this.errorProvider.SetError(textBox6, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox6, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox7)
+            {
+                if (this.textBox7.Text == "35")
+                {
+                    this.errorProvider.SetError(textBox7, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox7, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox8)
+            {
+                if (this.textBox8.Text == "44")
+                {
+                    this.errorProvider.SetError(textBox8, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox8, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox9)
+            {
+                if (this.textBox9.Text == "3")
+                {
+                    this.errorProvider.SetError(textBox9, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox9, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox10)
+            {
+                if (this.textBox10.Text == "26")
+                {
+                    this.errorProvider.SetError(textBox10, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox10, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox11)
+            {
+                if (this.textBox11.Text == "2")
+                {
+                    this.errorProvider.SetError(textBox11, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox11, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox12)
+            {
+                if (this.textBox12.Text == "1")
+                {
+                    this.errorProvider.SetError(textBox12, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox12, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox13)
+            {
+                if (this.textBox13.Text == "8")
+                {
+                    this.errorProvider.SetError(textBox13, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox13, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox14)
+            {
+                if (this.textBox14.Text == "34")
+                {
+                    this.errorProvider.SetError(textBox14, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox14, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox15)
+            {
+                if (this.textBox15.Text == "40")
+                {
+                    this.errorProvider.SetError(textBox15, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox15, "Wrong");
+                }
+            }
+            else if (selectedText == this.textBox16)
+            {
+                if (this.textBox16.Text == "25")
+                {
+                    this.errorProvider.SetError(textBox16, "");
+                }
+                else
+                {
+                    this.errorProvider.SetError(textBox16, "Wrong");
+                }
+            }
+
+
+
+
 
 
 
