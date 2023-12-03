@@ -489,6 +489,10 @@
             this.radioButtonDem.Text = "Democrat";
             this.radioButtonDem.UseVisualStyleBackColor = true;
             // 
+            // timer
+            // 
+            this.timer.Interval = 300;
+            // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
@@ -497,7 +501,7 @@
             // 
             this.progressBar.Location = new System.Drawing.Point(0, 450);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(800, 23);
+            this.progressBar.Size = new System.Drawing.Size(707, 22);
             this.progressBar.TabIndex = 37;
             this.progressBar.Value = 100;
             this.progressBar.Click += new System.EventHandler(this.progressBar_Click);

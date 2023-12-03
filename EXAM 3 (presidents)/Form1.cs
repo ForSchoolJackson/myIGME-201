@@ -1,5 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace EXAM_3__presidents_
 {
@@ -75,10 +81,7 @@ namespace EXAM_3__presidents_
             this.textBox10.TextChanged += new EventHandler(TextBox_TextChanged);
             this.textBox9.TextChanged += new EventHandler(TextBox_TextChanged);
 
-
-
-
-            //picture hnadlers
+            //picture handlers
             this.pictureBox.MouseEnter += new EventHandler(PictureBox__MouseEnter);
             this.pictureBox.MouseLeave += new EventHandler(PictureBox__MouseLeave);
 
@@ -270,6 +273,39 @@ namespace EXAM_3__presidents_
             Application.Exit();
         }
 
+        private void Timer__Tick(object sender, EventArgs e)
+        {
+            //decriment progress bar
+            --this.progressBar.Value;
+
+            //when timer is up
+            if (this.progressBar.Value == 0)
+            {
+                this.timer.Stop();
+                this.progressBar.Value = 100;
+
+                this.textBox1.Text = "0";
+                this.textBox2.Text = "0";
+                this.textBox3.Text = "0";
+                this.textBox4.Text = "0";
+                this.textBox5.Text = "0";
+                this.textBox6.Text = "0";
+                this.textBox7.Text = "0";
+                this.textBox8.Text = "0";
+                this.textBox9.Text = "0";
+                this.textBox10.Text = "0";
+                this.textBox11.Text = "0";
+                this.textBox12.Text = "0";
+                this.textBox13.Text = "0";
+                this.textBox14.Text = "0";
+                this.textBox15.Text = "0";
+                this.textBox16.Text = "0";
+                
+
+
+            }
+        }
+
         private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -285,6 +321,10 @@ namespace EXAM_3__presidents_
         {
             //based on the radio button currectly selected
             TextBox selectedText = sender as TextBox;
+
+            //start timer
+            this.timer.Start();
+            this.timer.Tick += new EventHandler(Timer__Tick);
 
             //set the errors for each president
             if (selectedText == this.textBox1)
@@ -464,13 +504,27 @@ namespace EXAM_3__presidents_
                 }
             }
 
+            //all answers correct
+            if(this.textBox1.Text == "23" && this.textBox2.Text == "32" && this.textBox3.Text == "42" && this.textBox4.Text == "43"
+                && this.textBox5.Text == "14" && this.textBox6.Text == "15" && this.textBox7.Text == "35" && this.textBox8.Text == "44"
+                && this.textBox9.Text == "3" && this.textBox10.Text == "26" && this.textBox11.Text == "2" && this.textBox12.Text == "1"
+                && this.textBox13.Text == "8" && this.textBox14.Text == "34" && this.textBox15.Text == "40" && this.textBox16.Text == "25")
+            {
+
+                timer.Stop();
+
+                //link for webbroswer
+                string link = "https://media.istockphoto.com/id/1404630183/photo/usa-america-united-states-new-year-or-independence-day-celebration-holiday-background.jpg?s=612x612&w=0&k=20&c=wz_SQCm9_uDGK34EnrbBL_yGHIeHx2MCRgqLPtZwmLY=";
+
+                //change web broser based on radio buttons
+                this.webBrowser.Url = new System.Uri(link);
 
 
-
-
+            }
 
 
         }
+
 
 
 
