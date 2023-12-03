@@ -72,9 +72,9 @@
             this.radioButtonDR = new System.Windows.Forms.RadioButton();
             this.radioButtonRep = new System.Windows.Forms.RadioButton();
             this.radioButtonDem = new System.Windows.Forms.RadioButton();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -289,6 +289,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(37, 20);
             this.textBox1.TabIndex = 19;
+            this.textBox1.Text = "0";
             // 
             // textBox2
             // 
@@ -296,6 +297,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(37, 20);
             this.textBox2.TabIndex = 20;
+            this.textBox2.Text = "0";
             // 
             // textBox3
             // 
@@ -303,6 +305,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(37, 20);
             this.textBox3.TabIndex = 21;
+            this.textBox3.Text = "0";
             // 
             // textBox4
             // 
@@ -310,6 +313,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(37, 20);
             this.textBox4.TabIndex = 24;
+            this.textBox4.Text = "0";
             // 
             // textBox5
             // 
@@ -317,6 +321,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(37, 20);
             this.textBox5.TabIndex = 23;
+            this.textBox5.Text = "0";
             // 
             // textBox6
             // 
@@ -324,6 +329,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(37, 20);
             this.textBox6.TabIndex = 22;
+            this.textBox6.Text = "0";
             // 
             // textBox7
             // 
@@ -331,6 +337,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(37, 20);
             this.textBox7.TabIndex = 26;
+            this.textBox7.Text = "0";
             // 
             // textBox8
             // 
@@ -338,6 +345,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(37, 20);
             this.textBox8.TabIndex = 25;
+            this.textBox8.Text = "0";
             // 
             // textBox9
             // 
@@ -345,6 +353,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(37, 20);
             this.textBox9.TabIndex = 34;
+            this.textBox9.Text = "0";
             // 
             // textBox10
             // 
@@ -352,6 +361,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(37, 20);
             this.textBox10.TabIndex = 33;
+            this.textBox10.Text = "0";
             // 
             // textBox11
             // 
@@ -359,6 +369,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(37, 20);
             this.textBox11.TabIndex = 32;
+            this.textBox11.Text = "0";
             // 
             // textBox12
             // 
@@ -366,6 +377,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(37, 20);
             this.textBox12.TabIndex = 31;
+            this.textBox12.Text = "0";
             // 
             // textBox13
             // 
@@ -373,6 +385,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(37, 20);
             this.textBox13.TabIndex = 30;
+            this.textBox13.Text = "0";
             // 
             // textBox14
             // 
@@ -380,6 +393,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(37, 20);
             this.textBox14.TabIndex = 29;
+            this.textBox14.Text = "0";
             // 
             // textBox15
             // 
@@ -387,6 +401,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(37, 20);
             this.textBox15.TabIndex = 28;
+            this.textBox15.Text = "0";
             // 
             // textBox16
             // 
@@ -394,6 +409,7 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(37, 20);
             this.textBox16.TabIndex = 27;
+            this.textBox16.Text = "0";
             // 
             // statusStrip
             // 
@@ -473,17 +489,18 @@
             this.radioButtonDem.Text = "Democrat";
             this.radioButtonDem.UseVisualStyleBackColor = true;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(0, 449);
+            this.progressBar.Location = new System.Drawing.Point(0, 450);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(800, 23);
             this.progressBar.TabIndex = 37;
             this.progressBar.Value = 100;
-            // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
+            this.progressBar.Click += new System.EventHandler(this.progressBar_Click);
             // 
             // Form
             // 
@@ -584,10 +601,10 @@
         private System.Windows.Forms.RadioButton radioButtonDR;
         private System.Windows.Forms.RadioButton radioButtonRep;
         private System.Windows.Forms.RadioButton radioButtonDem;
-        private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.RadioButton radioButtonAll;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
 
