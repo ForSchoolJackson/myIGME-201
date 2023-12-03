@@ -444,7 +444,6 @@
             this.radioButtonAll.Name = "radioButtonAll";
             this.radioButtonAll.Size = new System.Drawing.Size(36, 17);
             this.radioButtonAll.TabIndex = 4;
-            this.radioButtonAll.TabStop = true;
             this.radioButtonAll.Text = "All";
             this.radioButtonAll.UseVisualStyleBackColor = true;
             this.radioButtonAll.CheckedChanged += new System.EventHandler(this.radioButton21_CheckedChanged);
@@ -456,7 +455,6 @@
             this.radioButtonFed.Name = "radioButtonFed";
             this.radioButtonFed.Size = new System.Drawing.Size(70, 17);
             this.radioButtonFed.TabIndex = 3;
-            this.radioButtonFed.TabStop = true;
             this.radioButtonFed.Text = "Federalist";
             this.radioButtonFed.UseVisualStyleBackColor = true;
             // 
@@ -467,7 +465,6 @@
             this.radioButtonDR.Name = "radioButtonDR";
             this.radioButtonDR.Size = new System.Drawing.Size(136, 17);
             this.radioButtonDR.TabIndex = 2;
-            this.radioButtonDR.TabStop = true;
             this.radioButtonDR.Text = "Democratic-Republican";
             this.radioButtonDR.UseVisualStyleBackColor = true;
             // 
@@ -478,13 +475,13 @@
             this.radioButtonRep.Name = "radioButtonRep";
             this.radioButtonRep.Size = new System.Drawing.Size(79, 17);
             this.radioButtonRep.TabIndex = 1;
-            this.radioButtonRep.TabStop = true;
             this.radioButtonRep.Text = "Republican";
             this.radioButtonRep.UseVisualStyleBackColor = true;
             // 
             // radioButtonDem
             // 
             this.radioButtonDem.AutoSize = true;
+            this.radioButtonDem.Checked = true;
             this.radioButtonDem.Location = new System.Drawing.Point(7, 36);
             this.radioButtonDem.Name = "radioButtonDem";
             this.radioButtonDem.Size = new System.Drawing.Size(71, 17);

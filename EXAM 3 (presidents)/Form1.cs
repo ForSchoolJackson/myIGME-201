@@ -105,6 +105,9 @@ namespace EXAM_3__presidents_
             this.pictureBox.MouseEnter += new EventHandler(PictureBox__MouseEnter);
             this.pictureBox.MouseLeave += new EventHandler(PictureBox__MouseLeave);
 
+            //on web brwoser
+            this.webBrowser.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(WebBrowser__DocumentCompleted);
+
             //timer
             this.timer.Tick += new EventHandler(Timer__Tick);
 
@@ -556,6 +559,17 @@ namespace EXAM_3__presidents_
             //tool tip
             toolTip = new ToolTip();
             toolTip.SetToolTip(selectedTextBox, "Which # President");
+        }
+
+        private void WebBrowser__DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            HtmlElementCollection allLinks = webBrowser.Document.GetElementsByTagName("a");
+
+            foreach(HtmlElement link in allLinks)
+            {
+                link.SetAttribute("title", "Jackson Heim for President!");
+            }
+           
         }
 
 
