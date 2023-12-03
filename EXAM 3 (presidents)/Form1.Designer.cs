@@ -99,6 +99,10 @@
             this.webBrowser.Size = new System.Drawing.Size(422, 396);
             this.webBrowser.TabIndex = 1;
             // 
+            // toolTip
+            // 
+            this.toolTip.IsBalloon = true;
+            // 
             // exitButton
             // 
             this.exitButton.Location = new System.Drawing.Point(713, 415);
@@ -491,7 +495,7 @@
             // 
             // timer
             // 
-            this.timer.Interval = 300;
+            this.timer.Interval = 800;
             // 
             // errorProvider
             // 

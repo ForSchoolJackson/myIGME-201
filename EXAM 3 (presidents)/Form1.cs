@@ -15,7 +15,8 @@ namespace EXAM_3__presidents_
         {
             InitializeComponent();
 
-            radioButtonAll.Checked = true;
+            this.radioButtonAll.Checked = true;
+            this.exitButton.Enabled = false;
 
             //event handlers for presidents radio buttons
             this.radioButtonBH.CheckedChanged += new EventHandler(ClassRadioButton__CheckedChanged);
@@ -81,9 +82,31 @@ namespace EXAM_3__presidents_
             this.textBox10.TextChanged += new EventHandler(TextBox_TextChanged);
             this.textBox9.TextChanged += new EventHandler(TextBox_TextChanged);
 
+            //make tool tip 
+            this.textBox1.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox2.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox3.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox4.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox5.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox6.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox7.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox8.MouseHover += new EventHandler(TextBox_MouseHover);
+
+            this.textBox16.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox15.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox14.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox13.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox12.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox11.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox10.MouseHover += new EventHandler(TextBox_MouseHover);
+            this.textBox9.MouseHover += new EventHandler(TextBox_MouseHover);
+
             //picture handlers
             this.pictureBox.MouseEnter += new EventHandler(PictureBox__MouseEnter);
             this.pictureBox.MouseLeave += new EventHandler(PictureBox__MouseLeave);
+
+            //timer
+            this.timer.Tick += new EventHandler(Timer__Tick);
 
             //exit
             this.exitButton.Click += new EventHandler(ExitButton__Click);
@@ -281,6 +304,7 @@ namespace EXAM_3__presidents_
             //when timer is up
             if (this.progressBar.Value == 0)
             {
+
                 this.timer.Stop();
                 this.progressBar.Value = 100;
 
@@ -301,8 +325,6 @@ namespace EXAM_3__presidents_
                 this.textBox15.Text = "0";
                 this.textBox16.Text = "0";
                 
-
-
             }
         }
 
@@ -315,16 +337,15 @@ namespace EXAM_3__presidents_
                 e.Handled = true;
             }
 
+            //start timer
+            this.timer.Start();
+
         }
 
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
             //based on the radio button currectly selected
             TextBox selectedText = sender as TextBox;
-
-            //start timer
-            this.timer.Start();
-            this.timer.Tick += new EventHandler(Timer__Tick);
 
             //set the errors for each president
             if (selectedText == this.textBox1)
@@ -511,6 +532,8 @@ namespace EXAM_3__presidents_
                 && this.textBox13.Text == "8" && this.textBox14.Text == "34" && this.textBox15.Text == "40" && this.textBox16.Text == "25")
             {
 
+                this.exitButton.Enabled = true;
+
                 timer.Stop();
 
                 //link for webbroswer
@@ -523,6 +546,16 @@ namespace EXAM_3__presidents_
             }
 
 
+        }
+
+        private void TextBox_MouseHover(object sender, EventArgs e)
+        {
+            //based on the radio button currectly selected
+            TextBox selectedTextBox = sender as TextBox; 
+
+            //tool tip
+            toolTip = new ToolTip();
+            toolTip.SetToolTip(selectedTextBox, "Which # President");
         }
 
 
