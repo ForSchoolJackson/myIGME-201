@@ -15,6 +15,7 @@ namespace EXAM_3__presidents_
         {
             InitializeComponent();
 
+            this.radioButtonBH.Checked = true;
             this.radioButtonAll.Checked = true;
             this.exitButton.Enabled = false;
 
