@@ -14,6 +14,7 @@ namespace EXAM_3__presidents_
         public Form()
         {
             InitializeComponent();
+            ControlBox = false;
 
             this.radioButtonAll.Checked = true;
             this.exitButton.Enabled = false;
