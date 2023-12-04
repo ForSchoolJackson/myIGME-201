@@ -93,18 +93,22 @@
     <None Include="Resources\cult.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="toads\Toadsworth.png">
+    <Content Include="Resources\toad.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="toads\shellToad.png">
+    <None Include="Resources\toadHouse.jpg" />
+    <Content Include="Resources\Toadsworth.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="toads\blockToad.png">
+    <Content Include="Resources\shellToad.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="toads\ToadsRainbow.png">
+    <Content Include="Resources\ToadsRainbow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="toads\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

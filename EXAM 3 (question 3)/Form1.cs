@@ -42,7 +42,7 @@ namespace EXAM_3__question_3_
         //the extra button
         private void ButtonScared__Click(object sender, EventArgs e)
         {
-            this.pictureBoxStart.Image = System.Drawing.Image.FromFile("toads/blockToad.png");
+            this.pictureBoxStart.Image = System.Drawing.Image.FromFile("Resources/toad.png");
             this.scaredLabel.Text = "Dont be scared. Its me toad. These are my friends.";
         }
 
