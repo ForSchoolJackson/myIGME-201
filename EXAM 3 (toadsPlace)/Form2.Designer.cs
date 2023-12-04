@@ -35,7 +35,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.marioLabel = new System.Windows.Forms.Label();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.toadBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +51,11 @@
             // 
             // purgeButton
             // 
-            this.purgeButton.Location = new System.Drawing.Point(713, 415);
+            this.purgeButton.Location = new System.Drawing.Point(670, 415);
             this.purgeButton.Name = "purgeButton";
-            this.purgeButton.Size = new System.Drawing.Size(75, 23);
+            this.purgeButton.Size = new System.Drawing.Size(118, 23);
             this.purgeButton.TabIndex = 2;
-            this.purgeButton.Text = "Leave";
+            this.purgeButton.Text = "Please Dont Leave";
             this.purgeButton.UseVisualStyleBackColor = true;
             // 
             // radioButton1
@@ -114,13 +114,14 @@
             this.marioLabel.Size = new System.Drawing.Size(0, 13);
             this.marioLabel.TabIndex = 7;
             // 
-            // webBrowser1
+            // richTextBox1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(388, 133);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(372, 250);
-            this.webBrowser1.TabIndex = 8;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.richTextBox1.Location = new System.Drawing.Point(382, 155);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(386, 242);
+            this.richTextBox1.TabIndex = 8;
+            this.richTextBox1.Text = "Please write down a poem depicting your great love for toad:";
             // 
             // Form2
             // 
@@ -128,7 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EXAM_3__toadsPlace_.Properties.Resources.toadHouse;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.marioLabel);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
@@ -153,6 +154,6 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Label marioLabel;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
