@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toadBox = new System.Windows.Forms.PictureBox();
             this.purgeButton = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -35,7 +36,8 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.marioLabel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.toadBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,14 +116,18 @@
             this.marioLabel.Size = new System.Drawing.Size(0, 13);
             this.marioLabel.TabIndex = 7;
             // 
-            // richTextBox1
+            // richTextBox
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.richTextBox1.Location = new System.Drawing.Point(382, 155);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(386, 242);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "Please write down a poem depicting your great love for toad:";
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.richTextBox.Location = new System.Drawing.Point(382, 155);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.Size = new System.Drawing.Size(386, 242);
+            this.richTextBox.TabIndex = 8;
+            this.richTextBox.Text = "Please write down a poem depicting your great love for toad:";
+            // 
+            // timer
+            // 
+            this.timer.Interval = 200;
             // 
             // Form2
             // 
@@ -129,7 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EXAM_3__toadsPlace_.Properties.Resources.toadHouse;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.marioLabel);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
@@ -154,6 +160,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Label marioLabel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.Timer timer;
     }
 }
