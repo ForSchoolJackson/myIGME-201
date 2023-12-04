@@ -15,6 +15,7 @@ namespace EXAM_3__toadsPlace_
         public Form3()
         {
             InitializeComponent();
+            ControlBox = true;
 
             this.webBrowser.Url = new System.Uri("https://www.youtube.com/watch?v=jDwVkXVHIqg");
         }
