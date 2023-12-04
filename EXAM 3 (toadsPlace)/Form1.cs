@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EXAM_3__question_3_
+namespace EXAM_3__toadsPlace_
 {
-    public partial class Start : Form
+    public partial class Form1 : Form
     {
-        public Start()
+        public Form1()
         {
             InitializeComponent();
 
@@ -34,7 +34,7 @@ namespace EXAM_3__question_3_
         private void ButtonStart__Click(object sender, EventArgs e)
         {
             //form object for second form
-            ToadHouse toadHouse = new ToadHouse();
+            Form2 toadHouse = new Form2();
             toadHouse.ShowDialog();
             this.Hide();
         }
@@ -44,33 +44,6 @@ namespace EXAM_3__question_3_
         {
             this.pictureBoxStart.Image = System.Drawing.Image.FromFile("Resources/toad.png");
             this.scaredLabel.Text = "Dont be scared. Its me toad. These are my friends.";
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Start_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

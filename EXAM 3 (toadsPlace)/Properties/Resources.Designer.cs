@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EXAM_3__question_3_.Properties {
+namespace EXAM_3__toadsPlace_.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace EXAM_3__question_3_.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EXAM_3__question_3_.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EXAM_3__toadsPlace_.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -66,16 +66,6 @@ namespace EXAM_3__question_3_.Properties {
         internal static System.Drawing.Bitmap cult {
             get {
                 object obj = ResourceManager.GetObject("cult", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap toadHouse {
-            get {
-                object obj = ResourceManager.GetObject("toadHouse", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

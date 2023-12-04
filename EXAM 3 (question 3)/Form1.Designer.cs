@@ -110,7 +110,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::EXAM_3__question_3_.Properties.Resources.cult;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.scaredLabel);
             this.Controls.Add(this.pictureBoxStart);
@@ -121,6 +120,7 @@
             this.Controls.Add(this.buttonStart);
             this.Name = "Start";
             this.Text = "Start";
+            this.Load += new System.EventHandler(this.Start_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

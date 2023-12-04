@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{80B366A8-DFCC-4803-9FFA-1EF885FAB25D}</ProjectGuid>
+    <ProjectGuid>{B8D8E2AE-0C78-4B08-8BA6-90716BF8E818}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EXAM_3__question_3_</RootNamespace>
-    <AssemblyName>EXAM 3 %28question 3%29</AssemblyName>
+    <RootNamespace>EXAM_3__toadsPlace_</RootNamespace>
+    <AssemblyName>EXAM 3 %28toadsPlace%29</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -90,13 +90,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\toad.png">
+    <None Include="Resources\cult.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="Resources\toadHouse.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="toads\" />
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

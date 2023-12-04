@@ -1,6 +1,6 @@
-﻿namespace EXAM_3__question_3_
+﻿namespace EXAM_3__toadsPlace_
 {
-    partial class ToadHouse
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -34,21 +34,20 @@
             // 
             // toadBox
             // 
-            this.toadBox.Location = new System.Drawing.Point(28, 41);
+            this.toadBox.Location = new System.Drawing.Point(38, 40);
             this.toadBox.Name = "toadBox";
             this.toadBox.Size = new System.Drawing.Size(291, 379);
-            this.toadBox.TabIndex = 0;
+            this.toadBox.TabIndex = 1;
             this.toadBox.TabStop = false;
             // 
-            // ToadHouse
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-           // this.BackgroundImage = global::EXAM_3__question_3_.Properties.Resources.toadHouse;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toadBox);
-            this.Name = "ToadHouse";
-            this.Text = "Form2";
+            this.Name = "Form2";
+            this.Text = "Toads House";
             ((System.ComponentModel.ISupportInitialize)(this.toadBox)).EndInit();
             this.ResumeLayout(false);
 
