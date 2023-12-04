@@ -43,15 +43,15 @@ namespace EXAM_3__toadsPlace_
             RadioButton selectedButton = sender as RadioButton;
             if(selectedButton == radioButton1)
             {
-                this.toadBox.Image = System.Drawing.Image.FromFile("Resources/toad.png");
+                this.toadBox.Image = System.Drawing.Image.FromFile("Resources/toadsworth.png");
             }
             else if(selectedButton == radioButton2)
             {
-                this.toadBox.Image = System.Drawing.Image.FromFile("Resources/toad.png");
+                this.toadBox.Image = System.Drawing.Image.FromFile("Resources/captainToad.png");
             }
             else if (selectedButton == radioButton3)
             {
-                this.toadBox.Image = System.Drawing.Image.FromFile("Resources/toad.png");
+                this.toadBox.Image = System.Drawing.Image.FromFile("Resources/toadette.png");
             }
             else if (selectedButton == radioButton4)
             {
