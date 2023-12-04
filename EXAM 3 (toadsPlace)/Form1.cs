@@ -37,6 +37,7 @@ namespace EXAM_3__toadsPlace_
             Form2 toadHouse = new Form2();
             toadHouse.ShowDialog();
             this.Hide();
+            
         }
 
         //the extra button
