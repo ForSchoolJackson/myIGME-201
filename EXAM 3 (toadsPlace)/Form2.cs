@@ -28,7 +28,6 @@ namespace EXAM_3__toadsPlace_
 
             //text box event handlers
             this.richTextBox.KeyPress += new KeyPressEventHandler(TextBox__KeyPress);
-            this.richTextBox.TextChanged += new EventHandler(TextBox__TextChanged);
 
             //timer thread handler
             this.timer.Tick += new EventHandler(Timer__Tick);
@@ -66,10 +65,27 @@ namespace EXAM_3__toadsPlace_
             {
                 e.Handled = true;
             }
+
+            this.timer.Start();
         }
 
-        private void TextBox__TextChanged(object sender, EventArgs e)
+        private void Timer__Tick(object sender, EventArgs e)
         {
+            //decriment prgress bar
+            --this.progressBar.Value;
+
+            //when over
+            if(this.progressBar.Value == 0)
+            {
+                //stop timer
+                this.timer.Stop();
+                //reset prgress bar
+                this.progressBar.Value = 100;
+
+                //reset the text
+                this.richTextBox.ForeColor = Color.Red;
+                this.richTextBox.Text = "TOO SLOW!! YOU MUST DO BETTER!";
+            }
 
         }
 

@@ -38,6 +38,7 @@
             this.marioLabel = new System.Windows.Forms.Label();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.toadBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,12 +130,21 @@
             // 
             this.timer.Interval = 200;
             // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(12, 415);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(548, 23);
+            this.progressBar.TabIndex = 9;
+            this.progressBar.Value = 100;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EXAM_3__toadsPlace_.Properties.Resources.toadHouse;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.marioLabel);
             this.Controls.Add(this.radioButton4);
@@ -162,5 +172,6 @@
         private System.Windows.Forms.Label marioLabel;
         private System.Windows.Forms.RichTextBox richTextBox;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
