@@ -69,5 +69,15 @@ namespace EXAM_3__toadsPlace_.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toadHouse {
+            get {
+                object obj = ResourceManager.GetObject("toadHouse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

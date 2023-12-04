@@ -15,6 +15,7 @@ namespace EXAM_3__toadsPlace_
         public Form1()
         {
             InitializeComponent();
+            ControlBox = false;
 
             //event handlers
             this.buttonExit.Click += new EventHandler(ButtonExit__Click);
@@ -35,9 +36,9 @@ namespace EXAM_3__toadsPlace_
         {
             //form object for second form
             Form2 toadHouse = new Form2();
-            toadHouse.ShowDialog();
+            toadHouse.Show();
             this.Hide();
-            
+
         }
 
         //the extra button

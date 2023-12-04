@@ -15,6 +15,34 @@ namespace EXAM_3__toadsPlace_
         public Form2()
         {
             InitializeComponent();
+            ControlBox = false;
+
+            //event handlers
+            this.purgeButton.Click += new EventHandler(PurgeButton__Click);
+        }
+        private void PurgeButton__Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void toadBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
