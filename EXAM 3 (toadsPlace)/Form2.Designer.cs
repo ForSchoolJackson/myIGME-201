@@ -47,7 +47,8 @@
             this.toadBox.BackColor = System.Drawing.Color.Transparent;
             this.toadBox.Location = new System.Drawing.Point(38, 40);
             this.toadBox.Name = "toadBox";
-            this.toadBox.Size = new System.Drawing.Size(291, 379);
+            this.toadBox.Size = new System.Drawing.Size(291, 369);
+            this.toadBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.toadBox.TabIndex = 1;
             this.toadBox.TabStop = false;
             this.toadBox.Click += new System.EventHandler(this.toadBox_Click);
