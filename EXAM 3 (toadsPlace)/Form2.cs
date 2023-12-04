@@ -18,8 +18,9 @@ namespace EXAM_3__toadsPlace_
             ControlBox = false;
             this.progressBar.Visible = false;
 
-            //event handlers
+            //button event handlers
             this.purgeButton.Click += new EventHandler(PurgeButton__Click);
+            this.buttonCorrect.Click += new EventHandler(Correct__Click);
 
             //handlers for radio
             this.radioButton1.CheckedChanged += new EventHandler(ToadRadioButton__CheckChanged);
@@ -36,6 +37,14 @@ namespace EXAM_3__toadsPlace_
         private void PurgeButton__Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void Correct__Click(object sender, EventArgs e)
+        {
+            //form object for second form
+            Form3 toadMovie = new Form3();
+            toadMovie.ShowDialog();
+           
         }
 
         private void ToadRadioButton__CheckChanged(object sender, EventArgs e)

@@ -39,6 +39,12 @@
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.buttonCorrect = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.toadBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,12 +141,72 @@
             this.progressBar.TabIndex = 9;
             this.progressBar.Value = 100;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(466, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "This one?";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(670, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "This?";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(589, 57);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Maybe this?";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(485, 86);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "Here?";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // buttonCorrect
+            // 
+            this.buttonCorrect.Location = new System.Drawing.Point(713, 80);
+            this.buttonCorrect.Name = "buttonCorrect";
+            this.buttonCorrect.Size = new System.Drawing.Size(75, 23);
+            this.buttonCorrect.TabIndex = 14;
+            this.buttonCorrect.Text = "That one?";
+            this.buttonCorrect.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(604, 126);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 15;
+            this.button6.Text = "Over there?";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EXAM_3__toadsPlace_.Properties.Resources.toadHouse;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.buttonCorrect);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.marioLabel);
@@ -170,5 +236,11 @@
         private System.Windows.Forms.RichTextBox richTextBox;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonCorrect;
+        private System.Windows.Forms.Button button6;
     }
 }

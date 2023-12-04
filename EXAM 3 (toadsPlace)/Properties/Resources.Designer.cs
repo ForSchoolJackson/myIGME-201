@@ -63,6 +63,16 @@ namespace EXAM_3__toadsPlace_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _360_F_404873968_1EjhQM3nja9YCEkzsDYmd6an9jJJ9hy0 {
+            get {
+                object obj = ResourceManager.GetObject("360_F_404873968_1EjhQM3nja9YCEkzsDYmd6an9jJJ9hy0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cult {
             get {
                 object obj = ResourceManager.GetObject("cult", resourceCulture);
