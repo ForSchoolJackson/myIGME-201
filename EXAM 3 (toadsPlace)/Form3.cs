@@ -19,6 +19,15 @@ namespace EXAM_3__toadsPlace_
             this.webBrowser.Url = new System.Uri("https://www.youtube.com/watch?v=jDwVkXVHIqg");
         }
 
+
+
+
+
+
+
+
+
+
         private void Form3_Load(object sender, EventArgs e)
         {
 
