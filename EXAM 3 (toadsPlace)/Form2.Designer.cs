@@ -126,10 +126,6 @@
             this.richTextBox.TabIndex = 8;
             this.richTextBox.Text = "Please write down a poem depicting your great love for toad:";
             // 
-            // timer
-            // 
-            this.timer.Interval = 200;
-            // 
             // progressBar
             // 
             this.progressBar.Location = new System.Drawing.Point(12, 415);

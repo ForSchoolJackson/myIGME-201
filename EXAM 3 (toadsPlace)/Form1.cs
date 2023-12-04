@@ -26,7 +26,21 @@ namespace EXAM_3__toadsPlace_
         //exit button
         private void ButtonExit__Click(object sender, EventArgs e)
         {
+            //get a random
+            Random random = new Random();
 
+            //area width and height
+            int width = this.ClientSize.Width;
+            int height = this.ClientSize.Height;
+
+            //radmon widths and heights for button
+            int randomX = random.Next(0, width);
+            int randomY = random.Next(0, height);
+
+            //radomize loaction of start button
+            buttonStart.Location = new System.Drawing.Point(randomX, randomY);
+
+            //add text
             this.exitText.Text = "you cannot leave. you are a part of us now.";
 
         }

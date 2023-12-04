@@ -16,6 +16,7 @@ namespace EXAM_3__toadsPlace_
         {
             InitializeComponent();
             ControlBox = false;
+            this.progressBar.Visible = false;
 
             //event handlers
             this.purgeButton.Click += new EventHandler(PurgeButton__Click);
