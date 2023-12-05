@@ -417,6 +417,31 @@ namespace BTree
             Person person = null;
 
             // Your code here
+            Person[] people = { person = new Person("Jackson", 20),
+                person = new Person("Mother", 51),
+                person = new Person("Father", 51),
+                person = new Person("Sibling", 16),
+                person = new Person("Sibling", 19),
+                person = new Person("Cat", 2),
+                person = new Person("Cat", 4),
+                person = new Person("Grandma", 84),
+                person = new Person("Grandpa", 86),
+                person = new Person("Aunt", 48),
+                person = new Person("Uncle", 47),
+                person = new Person("Cousin", 13),
+                person = new Person("Cousin", 28),
+                person = new Person("Cousin", 26),
+                person = new Person("Cousin", 2)
+            };
+
+            foreach (Person p in people)
+            {
+                node = new BTree(p, root);
+                if (p.name == "Jackson")
+                {
+                    root = node;
+                }
+            }
 
 
             this.richTextBox.Text += "\n";
