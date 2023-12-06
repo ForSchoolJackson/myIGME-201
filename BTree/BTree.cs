@@ -417,6 +417,36 @@ namespace BTree
             Person person = null;
 
             // Your code here
+            Person[] optimallyDistributedValues = { person = new Person("stranger", 20),
+                 person = new Person("stranger", 13),
+                 person = new Person("stranger", 28),
+                 person = new Person("stranger", 2),
+                 person = new Person("stranger", 16),
+                 person = new Person("stranger", 26),
+                 person = new Person("stranger", 48),
+                 person = new Person("stranger", 4),
+                 person = new Person("stranger", 19),
+                 person = new Person("stranger", 51),
+                 person = new Person("stranger", 47),
+                 person = new Person("stranger", 84),
+                 person = new Person("stranger", 86)
+                  };
+
+            foreach (Person value in optimallyDistributedValues)
+            {
+
+                node = new BTree(value, root, isData: false);
+
+                if (value.age == 20)
+                {
+                    root = node;
+                }
+
+            }
+
+            BTree.TraverseAscending(root);
+            this.richTextBox.Text += "\n";
+
             Person[] people = { person = new Person("Jackson", 20),
                 person = new Person("Mother", 51),
                 person = new Person("Father", 51),
@@ -437,10 +467,7 @@ namespace BTree
             foreach (Person p in people)
             {
                 node = new BTree(p, root);
-                if (p.name == "Jackson")
-                {
-                    root = node;
-                }
+               
             }
 
 
