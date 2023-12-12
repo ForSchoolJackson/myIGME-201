@@ -175,7 +175,8 @@ namespace EXAM_problem_3
             graph[(int)EColors.Purple].AddEdge(1, graph[(int)EColors.Yellow]);
             graph[(int)EColors.Purple].edges.Sort();
 
-             //List<Node> shortestPathFromTHTtoHTH = GetShortestPathDijkstra();
+            //shortest path
+            List<Node> shortestPath = GetShortestPathDijkstra();
 
             while (true)
             {
@@ -187,15 +188,19 @@ namespace EXAM_problem_3
                 }
             }
 
+            Console.WriteLine("Dijkstra's Shortest Path:");
+            for (int i = 0; i < shortestPath.Count; i++)
+            {
+                Console.WriteLine(shortestPath[i].eColor);
+            }
+
+            //dfs
             Thread t = new Thread(DFS);
             t.Start();
 
-
-
-
         }
 
-        //FOR QUESTION 5
+        //FOR QUESTION 4
         static void DFS()
         {
             bool[] visited = new bool[lGraph.Length];
@@ -226,9 +231,116 @@ namespace EXAM_problem_3
             }
         }
 
+        //FOR QUESTION 5
+        static public List<Node> GetShortestPathDijkstra()
+        {
+            // traverse the path and calculate the minCostToStart and nearestToStart
+            DijkstraSearch();
+
+            List<Node> shortestPath = new List<Node>();
+
+            // start from the end
+            shortestPath.Add(graph[(int)EColors.Green]);
+
+            // recursively traverse from finish to start
+            BuildShortestPath(shortestPath, graph[(int)EColors.Green]);
+
+            // reverse the path
+            shortestPath.Reverse();
+
+            // return the shortest path
+            return (shortestPath);
+        }
+
+        static private void BuildShortestPath(List<Node> list, Node node)
+        {
+            if (node.nearestToStart == null)
+            {
+                return;
+            }
+
+            list.Add(node.nearestToStart);
+            BuildShortestPath(list, node.nearestToStart);
+        }
 
 
+        static int NodeOrderBy(Node n)
+        {
+            return n.minCostToStart;
+        }
 
+        static private void DijkstraSearch()
+        {
+            Node start = graph[(int)EColors.Red];
+
+            start.minCostToStart = 0;
+
+            List<Node> queue = new List<Node>();
+            queue.Add(start);
+
+            // 2 ways to point our delegate variable to a delegate method
+            Func<Node, int> nodeOrderBy = new Func<Node, int>(NodeOrderBy);
+            //Func<Node, int> nodeOrderBy = NodeOrderBy;
+
+            // stay in this loop while we have items in our queue
+            do
+            {
+                // sort our queue by minCostToStart
+                // option #1, use .Sort() which sorts in place
+                queue.Sort();
+
+                // option #2, use .OrderBy() with a delegate method or lambda expression 
+                // the next 5 lines are equivalent from descriptive to abbreviated:
+                queue = queue.OrderBy(nodeOrderBy).ToList();
+                queue = queue.OrderBy(delegate (Node n) { return n.minCostToStart; }).ToList();
+                queue = queue.OrderBy((Node n) => { return n.minCostToStart; }).ToList();
+                queue = queue.OrderBy((n) => { return n.minCostToStart; }).ToList();
+                queue = queue.OrderBy((n) => n.minCostToStart).ToList();
+                queue = queue.OrderBy(n => n.minCostToStart).ToList();
+
+                // grab the first node from our sorted queue
+                Node node = queue.First();
+
+                // remove it
+                queue.Remove(node);
+
+                // look at each edge and calculate the minCostToStart for each neighbor
+                foreach (Edge cnn in node.edges)
+                {
+                    Node neighborNode = cnn.connectedNode;
+
+                    if (neighborNode.visited)
+                    {
+                        continue;
+                    }
+
+                    // check if the path from this neighbor to the start is shorter if passing through this node
+                    if (neighborNode.minCostToStart == int.MaxValue ||
+                        node.minCostToStart + cnn.cost < neighborNode.minCostToStart)
+                    {
+                        // if it is then set this node as being nearest to start
+                        neighborNode.minCostToStart = node.minCostToStart + cnn.cost;
+                        neighborNode.nearestToStart = node;
+
+                        // and add this neighbor to the queue
+                        if (!queue.Contains(neighborNode))
+                        {
+                            queue.Add(neighborNode);
+                        }
+                    }
+                }
+
+                // set this node as being visited
+                node.visited = true;
+
+                // if we reached the target, then we're done!
+                if (node == graph[(int)EColors.Green])
+                {
+                    return;
+                }
+
+            } while (queue.Any());
+        }
 
     }
 }
