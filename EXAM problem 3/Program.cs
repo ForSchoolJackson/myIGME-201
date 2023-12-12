@@ -96,8 +96,6 @@ namespace EXAM_problem_3
     /* GREEN */  new EColors[0] 
 };
 
-
-
         static int[][] wGraph = new int[][]
 {                          // Red  Blue    Grey  Cyan   Orange  Yellow   Purple  Green
     /* RED */    new int[] { -1,    1,     5,    -1,     -1,     -1,      -1,    -1 },
